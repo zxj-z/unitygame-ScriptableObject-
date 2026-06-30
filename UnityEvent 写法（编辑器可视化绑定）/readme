@@ -1,0 +1,4 @@
+这就是我们日常说的 “UnityEvent 写法”，一般指把 UnityEvent 字段写在 MonoBehaviour 组件上，作为挂载对象的本地事件。
+本质：Unity 封装的「可序列化的方法回调集合」，核心作用是承载回调、支持编辑器可视化拖拽绑定。
+宿主：依附在场景里的 GameObject / 预制体组件上，属于单个对象的一部分。
+最典型例子：UGUI 按钮的 Button.onClick，就是标准的本地 UnityEvent。
