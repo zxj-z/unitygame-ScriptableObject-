@@ -1,0 +1,15 @@
+using UnityEngine;
+
+public class PlayerHealth : MonoBehaviour
+{
+    // 把创建好的事件SO拖进来
+    public IntEventSO healthChangedEvent;
+    public int currentHealth = 100;
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        // 通过SO触发事件
+        healthChangedEvent.Raise(currentHealth);
+    }
+}
